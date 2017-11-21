@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+{% for post in posts %}
+  <h1><a href = "{% url 'core_article_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+{% endfor %}
+
+{% endblock %}
